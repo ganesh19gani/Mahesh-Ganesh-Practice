@@ -1,0 +1,33 @@
+package com.example.Testing.controller;
+
+import java.lang.reflect.Array;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class Demooo {
+    public static void main(String[] args) {
+        /*List<Integer> demo = Arrays.asList(23,123456,133,1342,13431,1345123,7654,146543,12456,7886);
+        Optional<Integer> m = demo.stream().max((o2, o1) -> o2.compareTo(o1));
+        System.out.println(m.get());*/
+        /*List<String> names = Arrays.asList("mahesh");
+        Map<String, Long> namidjj = names.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(namidjj);*/
+       /* List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        int sum = numbers.stream()
+                .reduce(1, (a, b) -> a + b);
+        System.out.println(sum);*/
+        String input = "this_is_my_laptop";
+
+        String output = Arrays.stream(input.split("_"))
+                .map(word -> Character.toUpperCase(word.charAt(0)) + word.substring(1))
+                .collect(Collectors.joining(" "));
+        System.out.println(output);
+// Print each word in the array
+
+
+
+
+
+    }
+}
